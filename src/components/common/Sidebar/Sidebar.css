@@ -1,0 +1,167 @@
+/* Sidebar.css */
+.sidebar {
+  width: 300px;
+  height: 100vh;
+  background: #ffffff;
+  border-right: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Admin Profile Section */
+.admin-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px 30px 20px;
+  border-bottom: 1px solid #f0f0f0;
+  background: #ffffff;
+}
+
+.profile-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #f1f8e9;
+  border: 2px solid #4CAF50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.profile-icon svg {
+  color: #4CAF50;
+}
+
+.admin-profile h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 500;
+  color: #333333;
+  text-align: center;
+}
+
+/* Navigation Menu */
+.nav-menu {
+  flex: 1;
+  padding: 20px 0;
+  overflow-y: auto;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 16px 24px;
+  margin: 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  background: transparent;
+  border: none;
+  color: #666666;
+  font-size: 16px;
+}
+
+.nav-item:hover {
+  background: #f5f5f5;
+  color: #333333;
+}
+
+.nav-item.active {
+  background: #e8f5e9;
+  color: #4CAF50;
+  border-right: 3px solid #4CAF50;
+}
+
+.nav-icon {
+  margin-right: 16px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-icon svg {
+  width: 20px;
+  height: 20px;
+  color: inherit;
+}
+
+.nav-label {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.1px;
+  color: inherit;
+}
+
+/* Logout Section */
+.logout-section {
+  padding: 0;
+  border-top: 1px solid #f0f0f0;
+  background: #ffffff;
+}
+
+.nav-item.logout {
+  color: #f44336;
+  border-right: none;
+}
+
+.nav-item.logout:hover {
+  background: #ffebee;
+  color: #d32f2f;
+}
+
+/* Scrollbar Styling */
+.nav-menu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.nav-menu::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
+
+.nav-menu::-webkit-scrollbar-thumb {
+  background: #cccccc;
+  border-radius: 3px;
+}
+
+.nav-menu::-webkit-scrollbar-thumb:hover {
+  background: #aaaaaa;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 280px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  
+  .admin-profile {
+    padding: 30px 20px 20px 20px;
+  }
+  
+  .profile-circle {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .admin-profile h3 {
+    font-size: 20px;
+  }
+  
+  .nav-item {
+    padding: 14px 20px;
+  }
+}

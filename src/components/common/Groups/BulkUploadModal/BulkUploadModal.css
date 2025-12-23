@@ -1,0 +1,400 @@
+/* src/components/common/Groups/BulkUploadModal/BulkUploadModal.css */
+.bulk-modal-container {
+  background: #ffffff;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  animation: slideUp 0.3s ease;
+}
+
+.bulk-modal-content {
+  padding: 32px;
+}
+
+/* Instructions Section */
+.instructions {
+  margin-bottom: 32px;
+  padding: 24px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border-left: 4px solid #4CAF50;
+}
+
+.instructions h3 {
+  color: #2E7D32;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+}
+
+.instructions ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #555555;
+}
+
+.instructions li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.instructions strong {
+  color: #2E7D32;
+  font-weight: 600;
+}
+
+/* Template Download */
+.template-download {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.template-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: #ffffff;
+  color: #4CAF50;
+  border: 2px solid #4CAF50;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.template-btn:hover {
+  background: #4CAF50;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+/* Upload Zone */
+.upload-zone {
+  border: 3px dashed #cccccc;
+  border-radius: 16px;
+  padding: 60px 40px;
+  text-align: center;
+  background: #fafafa;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.upload-zone.drag-active {
+  border-color: #4CAF50;
+  background: #f1f8e9;
+  transform: scale(1.02);
+}
+
+.upload-icon {
+  margin-bottom: 20px;
+  color: #cccccc;
+}
+
+.upload-zone h3 {
+  color: #333333;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.upload-zone p {
+  color: #666666;
+  font-size: 1rem;
+  margin: 8px 0;
+}
+
+.upload-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: #4CAF50;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin: 16px 0 8px 0;
+}
+
+.upload-btn:hover {
+  background: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.file-info {
+  color: #999999;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Upload Status */
+.upload-status {
+  text-align: center;
+}
+
+.file-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.file-icon {
+  color: #4CAF50;
+  flex-shrink: 0;
+}
+
+.file-details {
+  flex: 1;
+  text-align: left;
+}
+
+.file-details h3 {
+  color: #333333;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+}
+
+.file-details p {
+  color: #666666;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Progress Section */
+.progress-section {
+  margin: 24px 0;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4CAF50, #66BB6A);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.progress-section p {
+  color: #4CAF50;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Success Message */
+.success-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 24px;
+  background: #e8f5e9;
+  color: #2E7D32;
+  border-radius: 12px;
+  font-weight: 600;
+  margin: 24px 0;
+}
+
+.success-message svg {
+  color: #4CAF50;
+}
+
+/* Error Section */
+.error-section {
+  margin: 24px 0;
+  text-align: left;
+}
+
+.error-section h4 {
+  color: #f44336;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+}
+
+.error-list {
+  background: #ffebee;
+  border-radius: 8px;
+  padding: 16px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.error-item {
+  color: #c62828;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  padding: 4px 0;
+  border-bottom: 1px solid #ffcdd2;
+}
+
+.error-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+/* Upload Actions */
+.upload-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.cancel-btn,
+.upload-btn-action {
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 140px;
+  justify-content: center;
+}
+
+.cancel-btn {
+  background: #ffffff;
+  color: #666666;
+  border: 2px solid #e0e0e0;
+}
+
+.cancel-btn:hover {
+  background: #f5f5f5;
+  border-color: #cccccc;
+  color: #333333;
+}
+
+.upload-btn-action {
+  background: #4CAF50;
+  color: #ffffff;
+  border: 2px solid #4CAF50;
+}
+
+.upload-btn-action:hover:not(:disabled) {
+  background: #45a049;
+  border-color: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.3);
+}
+
+.upload-btn-action:disabled {
+  background: #cccccc;
+  border-color: #cccccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Scrollbar Styling */
+.error-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.error-list::-webkit-scrollbar-track {
+  background: #f5f5f5;
+  border-radius: 3px;
+}
+
+.error-list::-webkit-scrollbar-thumb {
+  background: #cccccc;
+  border-radius: 3px;
+}
+
+.error-list::-webkit-scrollbar-thumb:hover {
+  background: #aaaaaa;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .bulk-modal-content {
+    padding: 24px;
+  }
+
+  .instructions {
+    padding: 20px;
+    margin-bottom: 24px;
+  }
+
+  .instructions h3 {
+    font-size: 1.1rem;
+  }
+
+  .upload-zone {
+    padding: 40px 20px;
+  }
+
+  .upload-zone h3 {
+    font-size: 1.3rem;
+  }
+
+  .file-info {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .file-details {
+    text-align: center;
+  }
+
+  .upload-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .cancel-btn,
+  .upload-btn-action {
+    width: 100%;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .bulk-modal-content {
+    padding: 20px;
+  }
+
+  .upload-zone {
+    padding: 30px 15px;
+  }
+
+  .template-btn,
+  .upload-btn {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .instructions ul {
+    padding-left: 16px;
+  }
+
+  .instructions li {
+    font-size: 0.9rem;
+  }
+}
